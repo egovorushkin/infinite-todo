@@ -82,7 +82,8 @@ struct ListManager {
             predicate: #Predicate<TodoItem> { $0.parent == nil && $0.list == nil }
         )
         guard let orphans = try? context.fetch(descriptor), !orphans.isEmpty else { return }
-        let defaultList = allLists().first { $0.name == "Tasks" } ?? addList(name: "Tasks")
+        let defaultName = String(localized: "Tasks")
+        let defaultList = allLists().first { $0.name == defaultName } ?? addList(name: defaultName)
         for task in orphans {
             task.list = defaultList
         }

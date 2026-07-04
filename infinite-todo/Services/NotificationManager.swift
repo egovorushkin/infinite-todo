@@ -61,7 +61,7 @@ enum NotificationManager {
         guard let dueDate = item.dueDate, !item.isCompleted else { return }
         let repeats = item.recurrenceRule != .none
         var fireDate = dueDate.addingTimeInterval(-leadTime)
-        var title = "Task due soon"
+        var title = String(localized: "Task due soon")
 
         // When the deadline is less than the lead time away, the "1 hour
         // before" moment has already passed — fall back to firing at the
@@ -69,13 +69,13 @@ enum NotificationManager {
         if !repeats && fireDate <= Date() {
             guard dueDate > Date() else { return }
             fireDate = dueDate
-            title = "Task due"
+            title = String(localized: "Task due")
         }
 
         let content = UNMutableNotificationContent()
         content.title = title
         content.body = item.title.trimmingCharacters(in: .whitespaces).isEmpty
-            ? "A task is due soon"
+            ? String(localized: "A task is due soon")
             : item.title
         content.sound = .default
 

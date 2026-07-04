@@ -126,14 +126,14 @@ struct TaskEditorView: View {
 
     private var reminderCaption: String {
         if recurrence != .none {
-            return "You'll get a reminder 1 hour before, repeating \(recurrence.label.lowercased())."
+            return String(localized: "You'll get a reminder 1 hour before, repeating \(recurrence.label.lowercased()).")
         }
         // Mirrors NotificationManager's fallback: when the deadline is less
         // than an hour out, the reminder fires at the due time instead.
         if dueDate.timeIntervalSinceNow < NotificationManager.leadTime {
-            return "You'll get a reminder at the due time."
+            return String(localized: "You'll get a reminder at the due time.")
         }
-        return "You'll get a reminder 1 hour before."
+        return String(localized: "You'll get a reminder 1 hour before.")
     }
 
     private func applyDueDate() {

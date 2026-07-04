@@ -18,8 +18,8 @@ enum ListsLayout: String, CaseIterable, Identifiable {
 
     var label: String {
         switch self {
-        case .stack: "Stack"
-        case .tabs: "Tabs"
+        case .stack: String(localized: "Stack")
+        case .tabs: String(localized: "Tabs")
         }
     }
 }
@@ -31,9 +31,9 @@ enum AppTheme: String, CaseIterable, Identifiable {
 
     var label: String {
         switch self {
-        case .system: "System"
-        case .light: "Light"
-        case .dark: "Dark"
+        case .system: String(localized: "System")
+        case .light: String(localized: "Light")
+        case .dark: String(localized: "Dark")
         }
     }
 

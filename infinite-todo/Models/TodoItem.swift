@@ -18,12 +18,12 @@ enum RecurrenceRule: String, CaseIterable, Codable, Identifiable {
 
     var label: String {
         switch self {
-        case .none: "Never"
-        case .hourly: "Hourly"
-        case .daily: "Daily"
-        case .weekly: "Weekly"
-        case .monthly: "Monthly"
-        case .yearly: "Yearly"
+        case .none: String(localized: "Never")
+        case .hourly: String(localized: "Hourly")
+        case .daily: String(localized: "Daily")
+        case .weekly: String(localized: "Weekly")
+        case .monthly: String(localized: "Monthly")
+        case .yearly: String(localized: "Yearly")
         }
     }
 
