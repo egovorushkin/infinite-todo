@@ -1,5 +1,7 @@
 # Infinite Todo
 
+<img src="infinite-todo/Assets.xcassets/AppIcon.appiconset/icon_v3.png" width="120" alt="Infinite Todo app icon">
+
 A SwiftUI + SwiftData todo app where tasks can nest inside tasks, to any depth.
 
 ## Features
