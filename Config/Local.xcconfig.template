@@ -1,0 +1,9 @@
+// Copy this file to Local.xcconfig (which is gitignored) and fill in your
+// own Apple Developer Team ID. This keeps personal signing config out of
+// the shared, committed project file.
+//
+// Find your Team ID at https://developer.apple.com/account under
+// Membership Details, or in Xcode: Settings > Accounts > (your account) >
+// (your team) > Team ID.
+
+DEVELOPMENT_TEAM =

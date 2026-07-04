@@ -20,11 +20,18 @@ enum NotificationManager {
     /// reminders), not the system.
     private static let pendingLimit = 60
 
-    static func requestAuthorizationIfNeeded() {
+    /// Requests permission if it's never been asked before. If the user
+    /// grants it, `onGranted` runs so already-dated tasks (e.g. restored
+    /// from iCloud before permission existed) get their reminders scheduled
+    /// right away rather than waiting for the next launch's `refreshAll`.
+    static func requestAuthorizationIfNeeded(onGranted: @escaping () -> Void = {}) {
         let center = UNUserNotificationCenter.current()
         center.getNotificationSettings { settings in
             guard settings.authorizationStatus == .notDetermined else { return }
-            center.requestAuthorization(options: [.alert, .sound]) { _, _ in }
+            center.requestAuthorization(options: [.alert, .sound]) { granted, _ in
+                guard granted else { return }
+                DispatchQueue.main.async(execute: onGranted)
+            }
         }
     }
 

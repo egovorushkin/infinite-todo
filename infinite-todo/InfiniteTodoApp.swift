@@ -21,7 +21,6 @@ struct InfiniteTodoApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .onAppear { NotificationManager.requestAuthorizationIfNeeded() }
                 .preferredColorScheme((AppTheme(rawValue: appThemeRaw) ?? .system).colorScheme)
         }
         .modelContainer(for: [TodoItem.self, TaskList.self])

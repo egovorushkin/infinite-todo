@@ -157,6 +157,10 @@ struct TaskManager {
     func delete(_ item: TodoItem) {
         let parent = item.parent
         cancelNotifications(inSubtreeOf: item)
+        // Without this, `parent.children` keeps a stale reference to `item`
+        // until the next fetch, so a parent left childless by this delete
+        // doesn't look discardable yet (see purgeDiscardableTasks).
+        parent?.children?.removeAll { $0 === item }
         context.delete(item) // cascade removes the subtree
         normalizeOrders(of: parent)
     }

@@ -22,3 +22,6 @@ Pods/
 # Editor tooling (personal, not project config)
 .vscode/
 buildServer.json
+
+# Personal signing config — see Config/Local.xcconfig.template
+Config/Local.xcconfig

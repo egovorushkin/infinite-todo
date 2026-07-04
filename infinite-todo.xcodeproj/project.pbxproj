@@ -6,19 +6,70 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		79C498EC96CA46FBA313312C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DC173B93A088805815607D /* Foundation.framework */; };
+		D37C6FD1736DEC82967CC161 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DC173B93A088805815607D /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7FF4042215163BE16A84CD29 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B4461B042FF5240700E4EC45 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B4461B0B2FF5240700E4EC45;
+			remoteInfo = "infinite-todo";
+		};
+		ADEBB3558E6F58152D6B6BAA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B4461B042FF5240700E4EC45 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B4461B0B2FF5240700E4EC45;
+			remoteInfo = "infinite-todo";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		0A28F52EDA2521E6CFB0D248 /* infinite-todoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "infinite-todoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		16DC173B93A088805815607D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		68F88045678A2D6A29841166 /* Local.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Local.xcconfig; sourceTree = "<group>"; };
+		6BECB5B8B99CEF7F4F8328CA /* infinite-todoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "infinite-todoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4461B0C2FF5240700E4EC45 /* infinite-todo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "infinite-todo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD479DDB284619263E410512 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		5B63859391B13DB70E62C7C8 /* infinite-todoUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
+			path = "infinite-todoUITests";
+			sourceTree = "<group>";
+		};
 		B4461B0E2FF5240700E4EC45 /* infinite-todo */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = "infinite-todo";
+			sourceTree = "<group>";
+		};
+		BA6E06E350467BE0DBFFDE58 /* infinite-todoTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
+			path = "infinite-todoTests";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		390DD87E0A91FA8CF7F99787 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D37C6FD1736DEC82967CC161 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B4461B092FF5240700E4EC45 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -26,14 +77,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CC52AC3ED94FDFE1826EEA04 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79C498EC96CA46FBA313312C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0AFAF6096C83459440A3F123 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				68F88045678A2D6A29841166 /* Local.xcconfig */,
+				FD479DDB284619263E410512 /* Info.plist */,
+			);
+			name = Config;
+			path = Config;
+			sourceTree = "<group>";
+		};
 		B4461B032FF5240700E4EC45 = {
 			isa = PBXGroup;
 			children = (
 				B4461B0E2FF5240700E4EC45 /* infinite-todo */,
 				B4461B0D2FF5240700E4EC45 /* Products */,
+				DD0BDDD0923E04D3B3C438EC /* Frameworks */,
+				BA6E06E350467BE0DBFFDE58 /* infinite-todoTests */,
+				0AFAF6096C83459440A3F123 /* Config */,
+				5B63859391B13DB70E62C7C8 /* infinite-todoUITests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -41,13 +114,52 @@
 			isa = PBXGroup;
 			children = (
 				B4461B0C2FF5240700E4EC45 /* infinite-todo.app */,
+				6BECB5B8B99CEF7F4F8328CA /* infinite-todoTests.xctest */,
+				0A28F52EDA2521E6CFB0D248 /* infinite-todoUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B9844E208CA69C58EDE795AE /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				16DC173B93A088805815607D /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		DD0BDDD0923E04D3B3C438EC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B9844E208CA69C58EDE795AE /* iOS */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		6AEEE1309D9E1F3C4D0DC550 /* infinite-todoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBF2C434F1FAB5B7205D54FB /* Build configuration list for PBXNativeTarget "infinite-todoTests" */;
+			buildPhases = (
+				7B0648BD6E0E776E472FA2A4 /* Sources */,
+				390DD87E0A91FA8CF7F99787 /* Frameworks */,
+				CE4D02F368F0DF843C10254E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				445DCA4159FCFBDE6A64C46C /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				BA6E06E350467BE0DBFFDE58 /* infinite-todoTests */,
+			);
+			name = "infinite-todoTests";
+			productName = "infinite-todoTests";
+			productReference = 6BECB5B8B99CEF7F4F8328CA /* infinite-todoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		B4461B0B2FF5240700E4EC45 /* infinite-todo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B4461B172FF5240900E4EC45 /* Build configuration list for PBXNativeTarget "infinite-todo" */;
@@ -64,11 +176,30 @@
 				B4461B0E2FF5240700E4EC45 /* infinite-todo */,
 			);
 			name = "infinite-todo";
-			packageProductDependencies = (
-			);
 			productName = "infinite-todo";
 			productReference = B4461B0C2FF5240700E4EC45 /* infinite-todo.app */;
 			productType = "com.apple.product-type.application";
+		};
+		B4F7C124FBFD0656558D7BA6 /* infinite-todoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BC24A1EB532DEC7DA02D0CA /* Build configuration list for PBXNativeTarget "infinite-todoUITests" */;
+			buildPhases = (
+				8AFA486B89F5B39B28A8DBC1 /* Sources */,
+				CC52AC3ED94FDFE1826EEA04 /* Frameworks */,
+				7E9AF79FDB14C6703D67D194 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A66B6F5434B730D2751CAFA2 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				5B63859391B13DB70E62C7C8 /* infinite-todoUITests */,
+			);
+			name = "infinite-todoUITests";
+			productName = "infinite-todoUITests";
+			productReference = 0A28F52EDA2521E6CFB0D248 /* infinite-todoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -103,12 +234,28 @@
 			projectRoot = "";
 			targets = (
 				B4461B0B2FF5240700E4EC45 /* infinite-todo */,
+				6AEEE1309D9E1F3C4D0DC550 /* infinite-todoTests */,
+				B4F7C124FBFD0656558D7BA6 /* infinite-todoUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7E9AF79FDB14C6703D67D194 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B4461B0A2FF5240700E4EC45 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE4D02F368F0DF843C10254E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -118,6 +265,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7B0648BD6E0E776E472FA2A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AFA486B89F5B39B28A8DBC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B4461B082FF5240700E4EC45 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -127,7 +288,90 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		445DCA4159FCFBDE6A64C46C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "infinite-todo";
+			target = B4461B0B2FF5240700E4EC45 /* infinite-todo */;
+			targetProxy = 7FF4042215163BE16A84CD29 /* PBXContainerItemProxy */;
+		};
+		A66B6F5434B730D2751CAFA2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "infinite-todo";
+			target = B4461B0B2FF5240700E4EC45 /* infinite-todo */;
+			targetProxy = ADEBB3558E6F58152D6B6BAA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		49330F143C54AD44A430C265 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				PRODUCT_BUNDLE_IDENTIFIER = "egovorushkin.infinite-todo.Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/infinite-todo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/infinite-todo";
+			};
+			name = Debug;
+		};
+		59B509F5E9F6213B8052B7D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				PRODUCT_BUNDLE_IDENTIFIER = "egovorushkin.infinite-todo.UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "infinite-todo";
+			};
+			name = Debug;
+		};
+		85551259D35F4E59F23B3356 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				PRODUCT_BUNDLE_IDENTIFIER = "egovorushkin.infinite-todo.UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "infinite-todo";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		86C1FE2C5935596128E5B430 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				PRODUCT_BUNDLE_IDENTIFIER = "egovorushkin.infinite-todo.Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/infinite-todo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/infinite-todo";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		B4461B152FF5240900E4EC45 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -249,14 +493,15 @@
 		};
 		B4461B182FF5240900E4EC45 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68F88045678A2D6A29841166 /* Local.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = N69MS32892;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Config/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Infinite TODO";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -282,14 +527,15 @@
 		};
 		B4461B192FF5240900E4EC45 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68F88045678A2D6A29841166 /* Local.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = N69MS32892;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Config/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Infinite TODO";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -316,6 +562,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2BC24A1EB532DEC7DA02D0CA /* Build configuration list for PBXNativeTarget "infinite-todoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85551259D35F4E59F23B3356 /* Release */,
+				59B509F5E9F6213B8052B7D1 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B4461B072FF5240700E4EC45 /* Build configuration list for PBXProject "infinite-todo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -330,6 +585,15 @@
 			buildConfigurations = (
 				B4461B182FF5240900E4EC45 /* Debug */,
 				B4461B192FF5240900E4EC45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBF2C434F1FAB5B7205D54FB /* Build configuration list for PBXNativeTarget "infinite-todoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86C1FE2C5935596128E5B430 /* Release */,
+				49330F143C54AD44A430C265 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

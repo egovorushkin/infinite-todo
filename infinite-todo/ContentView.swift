@@ -58,6 +58,9 @@ struct ContentView: View {
                 // Clear blank tasks left behind by a force-quit mid-entry.
                 TaskManager(context: context).purgeDiscardableTasks()
                 NotificationManager.refreshAll(context: context)
+                NotificationManager.requestAuthorizationIfNeeded {
+                    NotificationManager.refreshAll(context: context)
+                }
             }
             .toolbar {
                 // In tabs mode the chips are drag-reorderable and can't host
