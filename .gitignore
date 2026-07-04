@@ -1,0 +1,24 @@
+# Xcode
+build/
+DerivedData/
+*.xcuserstate
+*.xcscmblueprint
+xcuserdata/
+.swiftpm/
+*.xcworkspace/xcuserdata/
+*.xcworkspace/xcshareddata/
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# CocoaPods / SPM (not used now, harmless if adopted later)
+Pods/
+.build/
+
+# macOS
+.DS_Store
+
+# Editor tooling (personal, not project config)
+.vscode/
+buildServer.json
